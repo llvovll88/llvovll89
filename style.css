@@ -1,0 +1,244 @@
+/* UA Reset */
+body, h1, h2, ol, p{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+:root {
+    font-size: 62.5%; /* 10px */
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+.h1, h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Layouts */
+.wrapper{
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Components */
+body {
+    background-color:rgba(243, 150, 200, 0.966);
+    color: rgb(93, 85, 192);
+}
+
+.header {
+   display: flex;
+   padding: 2rem 0;
+   align-items: center;
+}
+
+.header-title {
+   font-size: 7rem;
+   font-family: 'Nanum Pen Script', cursive;
+   font-weight: 600;
+   line-height: 1;
+   color:rgb(228, 216, 216);
+}
+
+.header-title strong {
+    display: block;
+    color:rgba(209, 212, 238, 0.849)
+}
+
+.header-meta {
+    font-size: 2.7rem;
+    font-family: 'Nanum Pen Script', cursive;
+    display: flex;
+    align-items: center;
+    color: rgba(61, 66, 68, 0.712)
+}
+
+.header-meta::before {
+    content: ' ';
+    margin: 0 2rem;
+    background-color: currentColor;
+    width: 10rem;
+    height: 3px;
+}
+
+.timeline li {
+    background-color: rgba(113, 190, 190, 0.2);
+    border-radius: 5px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+.timeline li:nth-of-type(even) {
+    background-color: rgba(121, 51, 51, 0.2);
+    border-radius: 5px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+
+.parts {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    border: 3px solid rgb(213, 217, 233);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.parts-times {
+    width: 30%;
+    max-width: 20em;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(70, 68, 70);
+    font-weight: bold;
+}
+
+.parts-times span {
+    margin: 0 0.4em;
+    font-size: 2rem;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.parts-contents {
+    display: flex;
+    align-items: center;
+}
+
+.parts-profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 3px 50% 50% 3px;
+    box-shadow: 0 0 40px rgba(133, 148, 224, 0.548);
+}
+
+.parts-agenda {
+    padding: 0 2.4rem;
+    font-size: 2.2rem;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.parts-agenda p {
+    margin: 8px 0;
+    color: rgb(44, 42, 42);
+    display: flex;
+    align-items: center;
+}
+
+.parts-agenda h2 {
+    color: rgb(141, 121, 97);
+    font-size: 3.2rem;
+    font-family: 'Nanum Pen Script', cursive;
+    line-height: 1.1;
+}
+
+.parts-role {
+    color: rgb(219, 72, 207);
+    display: flex;
+    align-items: center;
+}
+
+.parts-role::before {
+    content: ' ';
+    flex-shrink: 0;
+    width: 0.4em;
+    height: 0.4em;
+    margin: 0 0.6em;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.contact{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(177, 168, 168);
+    margin-bottom: 30px;
+    border-bottom: 2.5px solid black;
+}
+
+.links>a{
+    color: blanchedalmond;
+    text-decoration: none;
+    font-family:'Nanum Pen Script', cursive;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.footer>p{
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+    margin-top: 7px;
+}
+
+
+@media ( max-width: 720px ) {
+
+    :root {
+        font-size: 48%;
+    }
+
+    .header {
+        display: block;
+        padding: 4rem 0;
+    }
+
+    .header-meta {
+        display: block;
+    }
+
+    .header-meta::before {
+        display: block;
+        margin: 2rem 0;
+    }
+    
+    .timeline li {
+        background-color: rgba(121, 51, 51, 0.2);
+        border-radius: 5px;
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+        margin-bottom: 2rem;
+    }
+
+    .parts-times {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0,0,0,0.4);
+        padding: 1rem 0;
+        width: 6em;
+        align-self: flex-start;
+        border-radius: 0 40px 40px 0;
+    }
+
+    .parts-profile {
+        display: none;
+
+    }
+
+    .parts-agenda p {
+        display: block;
+    }
+
+    .parts-role::before {
+        display: none;
+    }
+
+    .contents {
+        margin: 0 -4px;
+    }
+}
